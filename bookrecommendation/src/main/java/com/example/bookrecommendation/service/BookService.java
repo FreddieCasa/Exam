@@ -27,4 +27,8 @@ public class BookService {
     public List<Book> getBooksByGenre(String genre) {
         return bookRepository.findByGenre(genre);
     }
+
+    public void removeBookById(Long id) {
+      bookRepository.deleteById(id);
+    }
 }

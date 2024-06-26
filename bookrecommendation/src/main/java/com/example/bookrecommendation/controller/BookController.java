@@ -33,4 +33,9 @@ public class BookController {
     public List<Book> getBooksByGenre(@PathVariable String genre) {
         return bookService.getBooksByGenre(genre);
     }
+
+    @DeleteMapping("/remove/{id}")
+    public void  removeBookById(@PathVariable Long id) {
+         bookService.removeBookById(id);
+    }
 }
