@@ -38,4 +38,9 @@ public class BookController {
     public void  removeBookById(@PathVariable Long id) {
          bookService.removeBookById(id);
     }
+
+    @PostMapping("/update/{id}")
+    public void  updateBookById(@PathVariable Long id, @RequestBody Book newBookData) {
+         bookService.updateBookById(id,newBookData);
+    }
 }
